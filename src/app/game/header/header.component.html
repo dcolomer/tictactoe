@@ -1,0 +1,7 @@
+<p *ngIf="(_stateService.state$ | async).ganador === false">
+  Turn of {{ (_stateService.state$ | async).turno }}
+</p>
+
+<p style="color: seagreen" *ngIf="(_stateService.state$ | async).ganador === true">
+  There is a winner, {{ (_stateService.state$ | async).turno }}
+</p>
